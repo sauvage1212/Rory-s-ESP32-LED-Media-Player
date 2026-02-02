@@ -153,6 +153,7 @@ reader.readAsText(file);\
 reader.onload = (e) => {\
 let importFileContents = JSON.parse(e.target.result);\
 // console.log(\"File content:\", importFileContents);\n \
+importFileContents.length = importFileContents.notes.split(\",\").length;\
 resolve(importFileContents);\
 };\
 reader.onerror = function(e) {\
