@@ -37,6 +37,21 @@ void playMusic(String tuneName, int tempoInBPM, int tuneLength, int notes[]) {
     delay(tempoInMS*0.95);
     digitalWrite(controlPin3, LOW);
     delay(tempoInMS*0.05); 
+  } else if (note == 10) {
+    digitalWrite(controlPin1, HIGH);
+    delay(tempoInMS/2-tempoInMS*0.05);
+    digitalWrite(controlPin1, LOW);
+    delay(tempoInMS*0.05); 
+  } else if (note == 20) {
+    digitalWrite(controlPin2, HIGH);
+    delay(tempoInMS/2-tempoInMS*0.05);
+    digitalWrite(controlPin2, LOW);
+    delay(tempoInMS*0.05); 
+  } else if (note == 30) {
+    digitalWrite(controlPin3, HIGH);
+    delay(tempoInMS/2-tempoInMS*0.05);
+    digitalWrite(controlPin3, LOW);
+    delay(tempoInMS*0.05); 
   }else if (note == 11) {
     digitalWrite(controlPin1, HIGH);
     delay(tempoInMS*2-tempoInMS*0.05);
